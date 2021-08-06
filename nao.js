@@ -36,6 +36,7 @@ $(function(){
         console.log('[SLIDE]');
         qis.service('ALTextToSpeech').done(function(tts){
             als.alTextToSpeech = tts;
+            console.log('それでは講義を始めます。よろしくお願いいたします。');
             tts.say('それでは講義を始めます。よろしくお願いいたします。');
         });
         qis.service('ALMotion').done(function(alm){
