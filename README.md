@@ -5,7 +5,7 @@
 
     /opt/aldebaran/var/www/apps
 
-必要なファイルは，下記の通りです
+必要なファイルは，下記の通りです．
 
     test.html
     qimessaging.js
