@@ -11,10 +11,10 @@
     qimessaging.js
     socket.io.min.js
     jquery.min.js
-    pepper.js
+    .js
  
-クライアントPCのブラウザから下記のアドレスを開きます．
+クライアントPCのブラウザから下記のアドレスを開きます．なぜか nao.local ではうまくいかないので注意を．
 
-    http://nao.local/apps/test.html
+    http://NAOのIPアドレス/apps/test.html
 
 「接続」ボタンをクリックし，ブラウザのデベロッパーツールで，[CONNECTED]が表示されると成功です．「テスト」ボタンをクリックして，NAOがしゃべるのを確認してください．
