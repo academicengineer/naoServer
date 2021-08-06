@@ -13,6 +13,10 @@ $(function(){
             // 接続成功
             console.log('[CONNECTED]');
             // ALTextToSpeechを使う
+            qis.service('ALTextToSpeech').done(function(tts){
+                als.alTextToSpeech = tts;
+                tts.say('接続成功');
+            });
             // 接続断
             console.log('[DISCONNECTED]');
         })
