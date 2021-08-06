@@ -11,7 +11,7 @@
     qimessaging.js
     socket.io.min.js
     jquery.min.js
-    .js
+    nao.js
  
 クライアントPCのブラウザから下記のアドレスを開きます．なぜか nao.local ではうまくいかないので注意を．
 
