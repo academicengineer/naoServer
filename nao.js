@@ -29,7 +29,7 @@ $(function(){
 
     // テストボタンclickイベント
     $('#test-btn').on('click', function(){
-        // Pepperにしゃべらせる
+        // NAOにしゃべらせる
         console.log('[TEST]');
         if(als.alTextToSpeech) als.alTextToSpeech.say('こんにちは、僕はNAO先生です！よろしく');
     });
