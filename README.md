@@ -32,7 +32,10 @@
     git commit -m "コメント"
     git push origin main
     git status
+    git pull origin :naoServer
+    git push origin naoServer
+    git push origin main
 
 # 参考
-
+下記の情報に基づき作成しました．
     https://qiita.com/oggata/items/0a9b144d585b8dafa8d9
