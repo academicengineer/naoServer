@@ -13,45 +13,42 @@ $(function(){
             // 接続成功
             console.log('[CONNECTED]');
             // ALTextToSpeechを使う
-            qis.service('ALTextToSpeech').done(function(ins){
-                als.alTextToSpeech = ins;
+            qis.service('ALTextToSpeech').done(function(att){
+                als.alTextToSpeech = att;
             });
-            qis.service('ALMotion').done(function(ins){
-                als.alMotion = ins;
+            qis.service('ALMotion').done(function(alm){
+                als.alMotion = alm;
             });
-            qis.service('ALRobotPosture').done(function(ins){
-                als.alRobotPosture = ins;
+            qis.service('ALRobotPosture').done(function(arp){
+                als.alRobotPosture = arp;
             });
-            qis.service('ALAudioDevice').done(function(ins){
-                als.alALAudioDevice = ins;
+            qis.service('ALAudioDevice').done(function(aad){
+                als.alALAudioDevice = aad;
                 als.alALAudioDevice.setOutputVolume(0);
             });
-            qis.service('ALAnimatedSpeech').done(function(ins){
-                als.alAnimatedSpeech = ins;
+            qis.service('ALAnimatedSpeech').done(function(aas){
+                als.alAnimatedSpeech = aas;
             });
-            qis.service('ALTabletService').done(function(ins){
-                als.alALTabletService = ins;
+            qis.service('ALAutonomousLife').done(function(aal){
+                als.alALAutonomousLife = aal;
             });
-            qis.service('ALAutonomousLife').done(function(ins){
-                als.alALAutonomousLife = ins;
+            qis.service('ALBehaviorManager').done(function(abm){
+                als.alALBehaviorManager = abm;
             });
-            qis.service('ALBehaviorManager').done(function(ins){
-                als.alALBehaviorManager = ins;
+            qis.service('ALBattery').done(function(alb){
+                als.alALBattery = alb;
             });
-            qis.service('ALBattery').done(function(ins){
-                als.alALBattery = ins;
+            qis.service('ALBasicAwareness').done(function(aba){
+                als.alALBasicAwareness = aba;
             });
-            qis.service('ALBasicAwareness').done(function(ins){
-                als.alALBasicAwareness = ins;
+            qis.service('ALAutonomousMoves').done(function(aam){
+                als.alALAutonomousMoves = aam;
             });
-            qis.service('ALAutonomousMoves').done(function(ins){
-                als.alALAutonomousMoves = ins;
+            qis.service('ALLeds').done(function(all){
+                als.alALLeds = all;
             });
-            qis.service('ALLeds').done(function(ins){
-                als.alALLeds = ins;
-            });
-            qis.service('ALSystem').done(function(ins){
-                als.alALSystem = ins;
+            qis.service('ALSystem').done(function(als){
+                als.alALSystem = als;
             });
         })
         .on('disconnect', function(){
@@ -68,12 +65,12 @@ $(function(){
     $('#test-btn').on('click', function(){
         // NAOにしゃべらせる
         console.log('[TEST]');
-        if(als.alTextToSpeech) als.alTextToSpeech.say('こんにちは、僕はNAO先生です！よろしく');
+        //if(als.alTextToSpeech) als.alTextToSpeech.say('こんにちは、僕はNAO先生です！よろしく');
         //qis.service('ALTextToSpeech').done(function(tts){
-        //    tts.say('こんにちは、僕はペッパー！');
-        //});
-        qis.service('ALAnimatedSpeech').done(function(ins){
-            ins.say('こんにちは、僕はNAO先生です');
+        tts.say('こんにちは、僕は電気通信大学柏原研究室のNAO先生です！');
         });
+        //qis.service('ALAnimatedSpeech').done(function(ins){
+        //    ins.say('こんにちは、僕はNAO先生です');
+        //});
     });
 });
