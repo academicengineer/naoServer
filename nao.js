@@ -28,6 +28,7 @@ $(function(){
         console.log('[TEST]');
         qis.service('ALTextToSpeech').done(function(tts){
             als.alTextToSpeech = tts;
+            tts.say('こんにちは、僕は電気通信大学柏原研究室のNAO先生です！よろしくお願いいたします。');
         });
         qis.service('ALMotion').done(function(alm){
             als.alMotion = alm;
@@ -63,7 +64,6 @@ $(function(){
         qis.service('ALSystem').done(function(als){
             als.alALSystem = als;
         });
-        tts.say('こんにちは、僕は電気通信大学柏原研究室のNAO先生です！よろしくお願いいたします。');
     })
     .on('disconnect', function(){
         if(als.alTextToSpeech) als.alTextToSpeech.say('接続失敗です');
