@@ -23,6 +23,10 @@ $(function(){
         .on('error', function(){
             // 接続エラー
             console.log('[CONNECTION ERROR]');
+            qis.service('ALTextToSpeech').done(function(tts){
+                als.alTextToSpeech = tts;
+                tts.say('接続失敗');
+            });
         });
     });
 
