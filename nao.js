@@ -32,5 +32,11 @@ $(function(){
         // NAOにしゃべらせる
         console.log('[TEST]');
         if(als.alTextToSpeech) als.alTextToSpeech.say('こんにちは、僕はNAO先生です！よろしく');
+        qis.service('ALTextToSpeech').done(function(tts){
+            tts.say('こんにちは、僕はペッパー！');
+        });
+        //qis.service('ALAnimatedSpeech').done(function(ins){
+        //    // TODO: ここにモジュールを使ったコードを書く
+        //});
     });
 });
