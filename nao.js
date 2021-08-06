@@ -28,7 +28,7 @@ $(function(){
         console.log('[TEST]');
         qis.service('ALTextToSpeech').done(function(tts){
             als.alTextToSpeech = tts;
-            tts.say('こんにちは、僕は電気通信大学柏原研究室のNAO先生です！よろしくお願いいたします。');
+            tts.say('こんにちは、NAOです！よろしくお願いいたします。');
         });
         qis.service('ALMotion').done(function(alm){
             als.alMotion = alm;
