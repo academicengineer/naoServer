@@ -32,7 +32,7 @@
     git commit -m "コメント"
     git push origin main
     git status
-    git pull origin :naoServer
+    git pull origin :naoServer # リモートからローカルに pull してくる
     git push origin naoServer
     git push origin main
 
