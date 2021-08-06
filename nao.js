@@ -66,7 +66,7 @@ $(function(){
         // NAOにしゃべらせる
         console.log('[TEST]');
         //if(als.alTextToSpeech) als.alTextToSpeech.say('こんにちは、僕はNAO先生です！よろしく');
-        //qis.service('ALTextToSpeech').done(function(tts){
+        qis.service('ALTextToSpeech').done(function(tts){
         tts.say('こんにちは、僕は電気通信大学柏原研究室のNAO先生です！よろしくお願いいたします。');
         });
         //qis.service('ALAnimatedSpeech').done(function(ins){
