@@ -21,9 +21,18 @@
 
 「テスト」ボタンをクリックして，NAOがしゃべるのを確認してください．
 
+# NAOのAPI一覧について
+公式の http://doc.aldebaran.com/2-1/naoqi/ を参考にする．
+
+
+# 管理
 適宜，下記のgitコマンドでバージョン管理しています．
 
     git add ファイル名
     git commit -m "コメント"
     git push origin main
     git status
+
+# 参考
+
+    https://qiita.com/oggata/items/0a9b144d585b8dafa8d9
