@@ -34,10 +34,10 @@ $(function(){
     $('#slide-btn').on('click', function(){
         // NAOにしゃべらせる
         console.log('[SLIDE]');
-        //qis.service('ALTextToSpeech').done(function(tts){
-            //als.alTextToSpeech = tts;
-        tts.say('それでは講義を始めます。よろしくお願いいたします。');
-        //});
+        qis.service('ALTextToSpeech').done(function(tts){
+            als.alTextToSpeech = tts;
+            tts.say('それでは講義を始めます。よろしくお願いいたします。');
+        });
         qis.service('ALMotion').done(function(alm){
             als.alMotion = alm;
         });
