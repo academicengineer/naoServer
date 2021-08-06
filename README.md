@@ -1,7 +1,7 @@
 # naoServer
 クライアントPCから，JavaScript経由でNAOをサーバとしてやり取りするためのプログラムです．
 # 使い方
-以下のNAOのディレクトリに必要なファイルを配置します
+以下のNAOのディレクトリに必要なファイルを配置します．※NAOのnginxの都合です．
 
     /opt/aldebaran/var/www/apps
 
