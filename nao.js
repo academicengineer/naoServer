@@ -1,5 +1,6 @@
 $(function(){
     var qis, ip, als = {};
+    let img = document.getElementById("image_place");
 
     // 接続ボタンclickイベント
     $('#connect-btn').on('click', function(){
@@ -36,6 +37,7 @@ $(function(){
         console.log('[SLIDE]');
         qis.service('ALTextToSpeech').done(function(tts){
             als.alTextToSpeech = tts;
+            img.src = "lec01.png"
             console.log('それでは講義を始めます。よろしくお願いいたします。');
             tts.say('それでは講義を始めます。よろしくお願いいたします。');
         });
