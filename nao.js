@@ -18,7 +18,7 @@ $(function(){
                 tts.say('接続成功');
             });
             // 接続断
-            console.log('[DISCONNECTED]');
+            //console.log('[DISCONNECTED]');
         })
         .on('error', function(){
             // 接続エラー
@@ -31,13 +31,13 @@ $(function(){
     });
 
     // テストボタンclickイベント
-    $('#test-btn').on('click', function(){
+    $('#slide-btn').on('click', function(){
         // NAOにしゃべらせる
-        console.log('[TEST]');
-        qis.service('ALTextToSpeech').done(function(tts){
-            als.alTextToSpeech = tts;
-            tts.say('こんにちは、NAOです！よろしくお願いいたします。');
-        });
+        console.log('[SLIDE]');
+        //qis.service('ALTextToSpeech').done(function(tts){
+            //als.alTextToSpeech = tts;
+        tts.say('それでは講義を始めます。よろしくお願いいたします。');
+        //});
         qis.service('ALMotion').done(function(alm){
             als.alMotion = alm;
         });
