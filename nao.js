@@ -16,6 +16,43 @@ $(function(){
             qis.service('ALTextToSpeech').done(function(ins){
                 als.alTextToSpeech = ins;
             });
+            qis.service('ALMotion').done(function(ins){
+                als.alMotion = ins;
+            });
+            qis.service('ALRobotPosture').done(function(ins){
+                als.alRobotPosture = ins;
+            });
+            qis.service('ALAudioDevice').done(function(ins){
+                als.alALAudioDevice = ins;
+                als.alALAudioDevice.setOutputVolume(0);
+            });
+            qis.service('ALAnimatedSpeech').done(function(ins){
+                als.alAnimatedSpeech = ins;
+            });
+            qis.service('ALTabletService').done(function(ins){
+                als.alALTabletService = ins;
+            });
+            qis.service('ALAutonomousLife').done(function(ins){
+                als.alALAutonomousLife = ins;
+            });
+            qis.service('ALBehaviorManager').done(function(ins){
+                als.alALBehaviorManager = ins;
+            });
+            qis.service('ALBattery').done(function(ins){
+                als.alALBattery = ins;
+            });
+            qis.service('ALBasicAwareness').done(function(ins){
+                als.alALBasicAwareness = ins;
+            });
+            qis.service('ALAutonomousMoves').done(function(ins){
+                als.alALAutonomousMoves = ins;
+            });
+            qis.service('ALLeds').done(function(ins){
+                als.alALLeds = ins;
+            });
+            qis.service('ALSystem').done(function(ins){
+                als.alALSystem = ins;
+            });
         })
         .on('disconnect', function(){
             // 接続断
@@ -32,11 +69,11 @@ $(function(){
         // NAOにしゃべらせる
         console.log('[TEST]');
         if(als.alTextToSpeech) als.alTextToSpeech.say('こんにちは、僕はNAO先生です！よろしく');
-        qis.service('ALTextToSpeech').done(function(tts){
-            tts.say('こんにちは、僕はペッパー！');
-        });
-        //qis.service('ALAnimatedSpeech').done(function(ins){
-        //    // TODO: ここにモジュールを使ったコードを書く
+        //qis.service('ALTextToSpeech').done(function(tts){
+        //    tts.say('こんにちは、僕はペッパー！');
         //});
+        qis.service('ALAnimatedSpeech').done(function(ins){
+            ins.say('こんにちは、僕はNAO先生です');
+        });
     });
 });
