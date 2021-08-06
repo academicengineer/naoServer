@@ -13,45 +13,6 @@ $(function(){
             // 接続成功
             console.log('[CONNECTED]');
             // ALTextToSpeechを使う
-            qis.service('ALTextToSpeech').done(function(tts){
-                als.alTextToSpeech = tts;
-            });
-            qis.service('ALMotion').done(function(alm){
-                als.alMotion = alm;
-            });
-            qis.service('ALRobotPosture').done(function(arp){
-                als.alRobotPosture = arp;
-            });
-            qis.service('ALAudioDevice').done(function(aad){
-                als.alALAudioDevice = aad;
-                als.alALAudioDevice.setOutputVolume(0);
-            });
-            qis.service('ALAnimatedSpeech').done(function(aas){
-                als.alAnimatedSpeech = aas;
-            });
-            qis.service('ALAutonomousLife').done(function(aal){
-                als.alALAutonomousLife = aal;
-            });
-            qis.service('ALBehaviorManager').done(function(abm){
-                als.alALBehaviorManager = abm;
-            });
-            qis.service('ALBattery').done(function(alb){
-                als.alALBattery = alb;
-            });
-            qis.service('ALBasicAwareness').done(function(aba){
-                als.alALBasicAwareness = aba;
-            });
-            qis.service('ALAutonomousMoves').done(function(aam){
-                als.alALAutonomousMoves = aam;
-            });
-            qis.service('ALLeds').done(function(all){
-                als.alALLeds = all;
-            });
-            qis.service('ALSystem').done(function(als){
-                als.alALSystem = als;
-            });
-        })
-        .on('disconnect', function(){
             // 接続断
             console.log('[DISCONNECTED]');
         })
@@ -65,8 +26,47 @@ $(function(){
     $('#test-btn').on('click', function(){
         // NAOにしゃべらせる
         console.log('[TEST]');
-        //if(als.alTextToSpeech) als.alTextToSpeech.say('こんにちは、僕はNAO先生です！よろしく');
+        qis.service('ALTextToSpeech').done(function(tts){
+            als.alTextToSpeech = tts;
+        });
+        qis.service('ALMotion').done(function(alm){
+            als.alMotion = alm;
+        });
+        qis.service('ALRobotPosture').done(function(arp){
+            als.alRobotPosture = arp;
+        });
+        qis.service('ALAudioDevice').done(function(aad){
+            als.alALAudioDevice = aad;
+            als.alALAudioDevice.setOutputVolume(0);
+        });
+        qis.service('ALAnimatedSpeech').done(function(aas){
+            als.alAnimatedSpeech = aas;
+        });
+        qis.service('ALAutonomousLife').done(function(aal){
+            als.alALAutonomousLife = aal;
+        });
+        qis.service('ALBehaviorManager').done(function(abm){
+            als.alALBehaviorManager = abm;
+        });
+        qis.service('ALBattery').done(function(alb){
+            als.alALBattery = alb;
+        });
+        qis.service('ALBasicAwareness').done(function(aba){
+            als.alALBasicAwareness = aba;
+        });
+        qis.service('ALAutonomousMoves').done(function(aam){
+            als.alALAutonomousMoves = aam;
+        });
+        qis.service('ALLeds').done(function(all){
+            als.alALLeds = all;
+        });
+        qis.service('ALSystem').done(function(als){
+            als.alALSystem = als;
+        });
         tts.say('こんにちは、僕は電気通信大学柏原研究室のNAO先生です！よろしくお願いいたします。');
+    })
+    .on('disconnect', function(){
+        if(als.alTextToSpeech) als.alTextToSpeech.say('接続失敗です');
         //qis.service('ALAnimatedSpeech').done(function(ins){
         //    ins.say('こんにちは、僕はNAO先生です');
         //});
