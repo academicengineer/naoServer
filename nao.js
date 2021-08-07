@@ -33,21 +33,30 @@ $(function(){
 
     // テストボタンclickイベント
     $('#slide-btn').on('click', function(){
-        // NAOにしゃべらせる
+        // 講義開始
         console.log('[SLIDE]');
+        window.open('lec01.png', '_blank');
         qis.service('ALTextToSpeech').done(function(tts){
             als.alTextToSpeech = tts;
             tts.say('それでは講義を始めます。よろしくお願いいたします。');
             tts.say('今日は，学習工学特論の第一回目の講義です');
             tts.say('それでは，スライドを御覧ください');
-            window.open('lec01.png', '_blank');
-            als.alTextToSpeech = tts;
             tts.say('学習工学は，人間の学びをモデルとしてデザインし，デザインに基づく学習支援システムの開発と評価を行う研究分野です');
             tts.say('人間の学びとは？という問いを知識工学や認知科学の理論を応用した学術研究分野です');
         });
 
+        //　画像認識結果から学習者の受講状況取得
+
+        // 受講状況がうつ伏せ状態の場合
+
+        // 受講状況がうなづきの場合
+
+        // 視線が適切でない場合
+
+        //　例外処理
+
         //講義スライドに画面遷移
-        window.open('lec02.png', '_blank');
+        location.href = 'lec02.png';
         qis.service('ALTextToSpeech').done(function(tts){
             als.alTextToSpeech = tts;
             tts.say('いかがでしょうか。質問はありますか。特に柏原研究室では「学習モデル作りこそeLearning研究の本質」と捉え、先進的なeLearningの実現を目指して研究を進めています。');
