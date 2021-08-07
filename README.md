@@ -35,6 +35,7 @@
     git pull origin :naoServer # リモートからローカルに pull してくる
     git push origin naoServer  # ローカルからリモートに push する
     git push origin main
+    scp .\nao.js nao@nao.local:/data/home/nao/.local/share/PackageManager/apps/
 
 # 参考
 下記の情報に基づき作成しました．
