@@ -1,6 +1,5 @@
 $(function(){
     var qis, ip, als = {};
-    // let img = document.getElementById("image_place");
 
     // 接続ボタンclickイベント
     $('#connect-btn').on('click', function(){
@@ -16,8 +15,8 @@ $(function(){
             // ALTextToSpeechを使う
             qis.service('ALTextToSpeech').done(function(tts){
                 als.alTextToSpeech = tts;
-                console.log('接続成功');
-                tts.say('接続成功');
+                //console.log('接続成功');
+                tts.say('接続に成功しました');
             });
             // 接続断
             //console.log('[DISCONNECTED]');
@@ -38,13 +37,18 @@ $(function(){
         console.log('[SLIDE]');
         qis.service('ALTextToSpeech').done(function(tts){
             als.alTextToSpeech = tts;
-            console.log('それでは講義を始めます。よろしくお願いいたします。');
             tts.say('それでは講義を始めます。よろしくお願いいたします。');
+            tts.say('今日は，学習工学特論の第一回目の講義です');
+            tts.say('それでは，スライドを御覧ください');
         });
+        
         /*
         qis.service('ALMotion').done(function(alm){
             als.alMotion = alm;
+            alm.say('test');
         });
+        */
+        /*
         qis.service('ALRobotPosture').done(function(arp){
             als.alRobotPosture = arp;
         });
