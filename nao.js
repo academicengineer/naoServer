@@ -1,6 +1,6 @@
 $(function(){
     var qis, ip, als = {};
-    let img = document.getElementById("image_place");
+    // let img = document.getElementById("image_place");
 
     // 接続ボタンclickイベント
     $('#connect-btn').on('click', function(){
@@ -16,6 +16,7 @@ $(function(){
             // ALTextToSpeechを使う
             qis.service('ALTextToSpeech').done(function(tts){
                 als.alTextToSpeech = tts;
+                console.log('接続成功');
                 tts.say('接続成功');
             });
             // 接続断
@@ -37,7 +38,6 @@ $(function(){
         console.log('[SLIDE]');
         qis.service('ALTextToSpeech').done(function(tts){
             als.alTextToSpeech = tts;
-            img.src = "lec01.png"
             console.log('それでは講義を始めます。よろしくお願いいたします。');
             tts.say('それでは講義を始めます。よろしくお願いいたします。');
         });
