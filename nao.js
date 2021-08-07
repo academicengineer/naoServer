@@ -41,7 +41,14 @@ $(function(){
             tts.say('今日は，学習工学特論の第一回目の講義です');
             tts.say('それでは，スライドを御覧ください');
         });
-        
+        window.open('kougi.html', '_blank');
+
+        qis.service('ALTextToSpeech').done(function(tts){
+            als.alTextToSpeech = tts;
+            tts.say('いかがでしょうか。質問はありますか');
+            tts.say('今日は，学習工学特論の第一回目の講義でした。これで講義を終わります');
+            tts.say('ありがとうございました。');
+        });
         /*
         qis.service('ALMotion').done(function(alm){
             als.alMotion = alm;
