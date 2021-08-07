@@ -41,6 +41,7 @@ $(function(){
             console.log('それでは講義を始めます。よろしくお願いいたします。');
             tts.say('それでは講義を始めます。よろしくお願いいたします。');
         });
+        /*
         qis.service('ALMotion').done(function(alm){
             als.alMotion = alm;
         });
@@ -75,6 +76,7 @@ $(function(){
         qis.service('ALSystem').done(function(als){
             als.alALSystem = als;
         });
+        */
     })
     .on('disconnect', function(){
         if(als.alTextToSpeech) als.alTextToSpeech.say('接続失敗です');
