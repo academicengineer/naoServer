@@ -13,10 +13,15 @@ $(function(){
             // 接続成功
             console.log('[CONNECTED]');
             // ALTextToSpeechを使う
-            qis.service('ALTextToSpeech').done(function(tts){
+            /*qis.service('ALTextToSpeech').done(function(tts){
                 als.alTextToSpeech = tts;
                 //console.log('接続成功');
                 tts.say('接続に成功しました');
+            });
+            */
+            qis.service('ALMotion').done(function(alm){
+                als.alMotion = alm;
+                alm.moveTo();
             });
             // 接続断
             //console.log('[DISCONNECTED]');
@@ -49,14 +54,14 @@ $(function(){
         }).then(() => {
             console.log('[SLIDE02]');
             //location.href = 'lec02.png';
-            qis.service('ALTextToSpeech').done(function(tts){
-                als.alTextToSpeech = tts;
-                tts.say('いかがでしょうか。質問はありますか。特に柏原研究室では「学習モデル作りこそeLearning研究の本質」と捉え、先進的なeLearningの実現を目指して研究を進めています。');
-                tts.say('今日は，学習工学特論の第一回目の講義でした。これで講義を終わります');
-                tts.say('ありがとうございました。');
+            qis.service('ALAnimatedSpeech').done(function(aas){
+                als.alAnimatedSpeech = aas;
+                aas.say('いかがでしょうか。質問はありますか。特に柏原研究室では「学習モデル作りこそeLearning研究の本質」と捉え、先進的なeLearningの実現を目指して研究を進めています。');
+                aas.say('今日は，学習工学特論の第一回目の講義でした。これで講義を終わります');
+                aas.say('ありがとうございました。');
+
             });
         });
-
                 //　画像認識結果から学習者の受講状況取得
     
         // 受講状況がうつ伏せ状態の場合
