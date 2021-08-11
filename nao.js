@@ -56,13 +56,15 @@ $(function(){
         //　例外処理
 
         //講義スライドに画面遷移
-        location.href = 'lec02.png';
+        // location.href = 'lec02.png';
+        /*
         qis.service('ALTextToSpeech').done(function(tts){
             als.alTextToSpeech = tts;
             tts.say('いかがでしょうか。質問はありますか。特に柏原研究室では「学習モデル作りこそeLearning研究の本質」と捉え、先進的なeLearningの実現を目指して研究を進めています。');
             tts.say('今日は，学習工学特論の第一回目の講義でした。これで講義を終わります');
             tts.say('ありがとうございました。');
         });
+        */
         /*
         qis.service('ALMotion').done(function(alm){
             als.alMotion = alm;

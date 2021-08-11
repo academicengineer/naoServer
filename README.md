@@ -42,3 +42,6 @@
 
     https://qiita.com/ExA_DEV/items/dd4bda65dfab1e7f5d07
     https://qiita.com/oggata/items/0a9b144d585b8dafa8d9
+
+# BuFFALO-A-3420 のIPアドレス
+nv8kvdvb8k6ua
