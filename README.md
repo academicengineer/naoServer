@@ -26,14 +26,13 @@
 
 
 # 管理
-適宜，下記のgitコマンドでバージョン管理しています．うまくNAOの講義が再生されない場合は，ブラウザのキャッシュを削除してください．
+適宜，下記のgitコマンドでバージョン管理しています．最後に scp して NAOにファイルを転送します．
+
+
+うまくNAOの講義が再生されない場合は，ブラウザのキャッシュを削除してください．
 
     git add ファイル名
     git commit -m "コメント"
-    git push origin main
-    git status
-    git pull origin :naoServer # リモートからローカルに pull してくる
-    git push origin naoServer  # ローカルからリモートに push する
     git push origin main
     scp .\nao.js nao@nao.local:/data/home/nao/.local/share/PackageManager/apps/
 
