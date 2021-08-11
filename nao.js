@@ -74,46 +74,6 @@ $(function(){
         
         //講義スライドに画面遷移
 
-
-        /*
-        qis.service('ALMotion').done(function(alm){
-            als.alMotion = alm;
-            alm.say('test');
-        });
-        */
-        /*
-        qis.service('ALRobotPosture').done(function(arp){
-            als.alRobotPosture = arp;
-        });
-        qis.service('ALAudioDevice').done(function(aad){
-            als.alALAudioDevice = aad;
-            als.alALAudioDevice.setOutputVolume(0);
-        });
-        qis.service('ALAnimatedSpeech').done(function(aas){
-            als.alAnimatedSpeech = aas;
-        });
-        qis.service('ALAutonomousLife').done(function(aal){
-            als.alALAutonomousLife = aal;
-        });
-        qis.service('ALBehaviorManager').done(function(abm){
-            als.alALBehaviorManager = abm;
-        });
-        qis.service('ALBattery').done(function(alb){
-            als.alALBattery = alb;
-        });
-        qis.service('ALBasicAwareness').done(function(aba){
-            als.alALBasicAwareness = aba;
-        });
-        qis.service('ALAutonomousMoves').done(function(aam){
-            als.alALAutonomousMoves = aam;
-        });
-        qis.service('ALLeds').done(function(all){
-            als.alALLeds = all;
-        });
-        qis.service('ALSystem').done(function(als){
-            als.alALSystem = als;
-        });
-        */
     })
     .on('disconnect', function(){
         if(als.alTextToSpeech) als.alTextToSpeech.say('接続失敗です');

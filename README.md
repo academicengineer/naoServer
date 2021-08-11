@@ -45,6 +45,46 @@
 # BuFFALO-A-3420 のIPアドレス
 nv8kvdvb8k6ua
 
+# NAOqiの使い方
+こんな感じです．
+
+
+        qis.service('ALMotion').done(function(alm){
+            als.alMotion = alm;
+            alm.moveTo();
+        });
+        qis.service('ALRobotPosture').done(function(arp){
+            als.alRobotPosture = arp;
+        });
+        qis.service('ALAudioDevice').done(function(aad){
+            als.alALAudioDevice = aad;
+            als.alALAudioDevice.setOutputVolume(0);
+        });
+        qis.service('ALAnimatedSpeech').done(function(aas){
+            als.alAnimatedSpeech = aas;
+        });
+        qis.service('ALAutonomousLife').done(function(aal){
+            als.alALAutonomousLife = aal;
+        });
+        qis.service('ALBehaviorManager').done(function(abm){
+            als.alALBehaviorManager = abm;
+        });
+        qis.service('ALBattery').done(function(alb){
+            als.alALBattery = alb;
+        });
+        qis.service('ALBasicAwareness').done(function(aba){
+            als.alALBasicAwareness = aba;
+        });
+        qis.service('ALAutonomousMoves').done(function(aam){
+            als.alALAutonomousMoves = aam;
+        });
+        qis.service('ALLeds').done(function(all){
+            als.alALLeds = all;
+        });
+        qis.service('ALSystem').done(function(als){
+            als.alALSystem = als;
+        });
+
 **JavaScript制御で使えそうなNAOqiモジュール一覧**
 
 | モジュール名 | 機能 | 使えそうなメソッド |
@@ -59,3 +99,4 @@ nv8kvdvb8k6ua
 | ALSpeechRecognition    | 簡易的な音声認識を行います。予め登録された語彙に反応します。 | <nobr>`setVocabulary`</nobr><br />認識する語彙を設定する<br /><nobr>`subscribe`</nobr><br />聞き取り開始<br /><nobr>`unsubscribe`</nobr><br />聞き取り停止<br /> |
 | ALTextToSpeech    | しゃべらせます。 | <nobr>`say`</nobr><br />しゃべらせる |
 | ALBattery    | 内蔵バッテリーの状態を取得します。 |   <nobr>`getBatteryCharge`</nobr><br />バッテリー残量を取得する<br /> |
+
