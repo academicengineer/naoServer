@@ -17,9 +17,7 @@ $(function(){
             qis.service('ALAnimatedSpeech').done(function(aas){
                 als.alAnimatedSpeech = aas;
                 //console.log('接続成功');
-                aas.say('システム、オールグリーン');
-                aas.say('各部、異常なし、いつでもいけます');
-                aas.say('NAO、起動します');
+                aas.say('システム、オールグリーン。各部、異常なし、いつでもいけます。NAO、起動します');
             });
 
             // 接続断
@@ -43,11 +41,7 @@ $(function(){
             window.open('lec01.png', '_blank');
             qis.service('ALAnimatedSpeech').done(function(aas){
                 als.alAnimatedSpeech = aas;
-                aas.say('それでは講義を始めます。よろしくお願いいたします。');
-                aas.say('今日は，学習工学特論の第一回目の講義です');
-                aas.say('それでは，スライドを御覧ください');
-                aas.say('学習工学は，人間の学びをモデルとしてデザインし，デザインに基づく学習支援システムの開発と評価を行う研究分野です');
-                aas.say('人間の学びとは？という問いを知識工学や認知科学の理論を応用した学術研究分野です');
+                aas.say('それでは講義を始めます。よろしくお願いいたします。今日は，学習工学特論の第一回目の講義です。それでは，スライドを御覧ください。。学習工学は，人間の学びをモデルとしてデザインし，デザインに基づく学習支援システムの開発と評価を行う研究分野です。人間の学びとは？という問いを知識工学や認知科学の理論を応用した学術研究分野です');
             });
             resolve();
         }).then(() => {
@@ -55,9 +49,7 @@ $(function(){
             //location.href = 'lec02.png';
             qis.service('ALAnimatedSpeech').done(function(aas){
                 als.alAnimatedSpeech = aas;
-                aas.say('いかがでしょうか。質問はありますか。特に柏原研究室では「学習モデル作りこそeLearning研究の本質」と捉え、先進的なeLearningの実現を目指して研究を進めています。');
-                aas.say('今日は，学習工学特論の第一回目の講義でした。これで講義を終わります');
-                aas.say('ありがとうございました。');
+                aas.say('いかがでしょうか。質問はありますか。特に柏原研究室では「学習モデル作りこそeLearning研究の本質」と捉え、先進的なeLearningの実現を目指して研究を進めています。今日は，学習工学特論の第一回目の講義でした。これで講義を終わります。ありがとうございました。');
             });
         });
         
@@ -75,10 +67,10 @@ $(function(){
 
     })
     .on('disconnect', function(){
-        if(als.alTextToSpeech) als.alTextToSpeech.say('接続失敗です');
-        //qis.service('ALAnimatedSpeech').done(function(ins){
-        //    ins.say('こんにちは、僕はNAO先生です');
-        //});
+        //if(als.alTextToSpeech) als.alTextToSpeech.say('接続失敗です');
+        qis.service('ALAnimatedSpeech').done(function(ins){
+            ins.say('こんにちは、僕はNAO先生です');
+        });
     });
 });
 
