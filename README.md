@@ -51,7 +51,7 @@ nv8kvdvb8k6ua
 
         qis.service('ALMotion').done(function(alm){
             als.alMotion = alm;
-            alm.moveTo();
+            alm.moveTo;
         });
         qis.service('ALRobotPosture').done(function(arp){
             als.alRobotPosture = arp;
@@ -100,3 +100,78 @@ nv8kvdvb8k6ua
 | ALTextToSpeech    | しゃべらせます。 | <nobr>`say`</nobr><br />しゃべらせる |
 | ALBattery    | 内蔵バッテリーの状態を取得します。 |   <nobr>`getBatteryCharge`</nobr><br />バッテリー残量を取得する<br /> |
 
+# ここに全てある
+http://doc.aldebaran.com/1-14/naoqi/index.html
+
+使いたいAPIとメソッドをサンプルのPythonコードから探して試すとNAOは動きます
+
+
+NAOqi modules APIs
+See also the NAOqi Framework overview to have an overview of the NAOqi framework.
+
+Core
+Read also the NAOqi Core introduction.
+
+ALBehaviorManager API | overview
+ALConnectionManager API | overview
+ALExtractor | API | overview
+ALMemory API | overview
+ALModule API | overview
+ALPreferences API | overview
+ALResourceManager API | overview
+ALVisionExtractors | API | overview
+ALBonjour - deprecated API | overview
+ALLogger - deprecated API | overview
+ALLauncher - deprecated API | overview
+Motion
+Read also the NAOqi Motion introduction.
+
+ALMotion API | overview
+ALNavigation API | overview
+ALRobotPosture API | overview
+ALMotionRecorder - deprecated API | overview
+Audio
+Read also the NAOqi Audio introduction.
+
+ALAudioDevice API | overview
+ALAudioPlayer API | overview
+ALAudioRecoder API | overview
+ALAudioSourceLocalisation API | overview
+ALSoundDetection API | overview
+ALSpeechRecognition API | overview
+ALTextToSpeech API | overview
+Vision
+Read also the NAOqi Vision introduction.
+
+ALBacklightingDetection API | overview
+ALDarknessDetection API | overview
+ALFaceDetection API | overview
+ALLandmarkDetection API | overview
+ALMovementDetection API | overview
+ALPhotoCapture API | overview
+ALRedBallDetection API | overview
+ALVideoDevice API | overview
+ALVideoRecorder API | overview
+ALVisionRecognition API | overview
+ALVisualCompass API | overview
+ALVisionToolBox - deprecated API | overview
+Sensors
+Read also the NAOqi Sensors introduction.
+
+ALBattery API | overview
+ALFsr API | overview
+ALInfrared API | overview
+ALLaser API | overview
+ALSensors API | overview
+ALSonar API | overview
+ALLeds API | overview
+ALRobotPose - deprecated API | overview
+Trackers
+Read also the NAOqi Trackers introduction.
+
+ALFaceTracker API
+ALRedBallTracker API
+DCM
+Read also the DCM introduction.
+
+DCM API | overview
